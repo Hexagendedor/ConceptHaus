@@ -37,8 +37,6 @@
             
             <div class="card-footer">
                 <paginate-links for="alumnos" :classes="{'ul': 'pagination', 'li': 'page-item', 'a': 'page-link'}" :async="true" show-step-links></paginate-links>
-                <router-link to="/alumnos">Go to Home</router-link>
-                <router-link to="/calificaciones">Go to cals</router-link>
             </div>
     </div>
   
