@@ -6,24 +6,44 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 var VuePaginate = require('vue-paginate');
-//import VueRouter from 'vue-router'
 import Vuetify from 'Vuetify';
 /** To import vue-router */
-import Routes from '@/js/routes.js';
-import App from '@/js/components/AlumnosComponent';
-//componentfile
+import App from '@/js/views/App';
 
 /**
  * The following block is used for implementing vue-pagination and Vuetify
  */
 Vue.use(VuePaginate)
 Vue.use(Vuetify);
-//Vue.use(VueRouter)
+Vue.use(VueRouter)
+
+
+
+import Home from './components/AlumnosComponent'
+import Alumnos from './components/ListaComponent'
+
+
+const router = new VueRouter({
+    mode: 'history',
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: Home
+        },
+        {
+            path: '/calificaciones',
+            name: 'calificaciones',
+            component: Alumnos,
+        },
+    ],
+});
 
 const app = new Vue({
-    Routes,
+    router,
     vuetify: new Vuetify(),
     render: h => h(App),
 }).$mount('#app');

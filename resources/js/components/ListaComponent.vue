@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    
+    <div id="mute"></div>
     <div class="card">
           <div class="card-header">
               <h3 class="card-title">Calificaciones</h3>

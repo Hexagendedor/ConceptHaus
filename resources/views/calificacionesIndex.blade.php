@@ -20,8 +20,9 @@
     </style>
 </head>
 <body>
-    <div id="mute"></div>
-    <div id="app"></div>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <div id="app">
+      <app></app>
+    </div>
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
